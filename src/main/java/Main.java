@@ -1,19 +1,19 @@
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        System.out.println("Стартует главный поток");
+        System.out.println("РЎС‚Р°СЂС‚СѓРµС‚ РіР»Р°РІРЅС‹Р№ РїРѕС‚РѕРє");
         ThreadGroup myMainGroup = new ThreadGroup("my main group");
 
         for (int i = 0; i < 4; i++) {
             MyThread myThread = new MyThread();
-            myThread.setName("задача " +i);
+            myThread.setName("Р·Р°РґР°С‡Р° " +i);
             Thread theard1 = new Thread(myMainGroup, myThread);
             theard1.start();
-            System.out.println("Стартует "+ myThread.getName());
+            System.out.println("РЎС‚Р°СЂС‚СѓРµС‚ "+ myThread.getName());
         }
 
         Thread.sleep(5000);
         myMainGroup.interrupt();
 
-        System.out.println("Главный поток остановлен");
+        System.out.println("Р“Р»Р°РІРЅС‹Р№ РїРѕС‚РѕРє РѕСЃС‚Р°РЅРѕРІР»РµРЅ");
     }
 }

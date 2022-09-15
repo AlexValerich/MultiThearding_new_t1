@@ -10,13 +10,13 @@ public class MyThread extends Thread{
         try {
             while(!isInterrupted()) {
 
-                System.out.println("Всем привет!" + " поток "+getName()+" запущен");
+                System.out.println("Р’СЃРµРј РїСЂРёРІРµС‚!" + " РїРѕС‚РѕРє "+getName()+" Р·Р°РїСѓС‰РµРЅ");
                 Thread.sleep(1000);
             }
         } catch (InterruptedException err) {
 
         } finally{
-            System.out.printf("%s завершен\n", getName());
+            System.out.printf("%s Р·Р°РІРµСЂС€РµРЅ\n", getName());
         }
     }
 }
